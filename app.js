@@ -10,12 +10,12 @@ require('dotenv').config();
 // mongoDB connection
 var mongoose = require('mongoose');
 
-mongoose.connect(process.env.DB_URL, function(err, res){
+mongoose.connect(process.env.MONGODB_URI, function(err, res){
   if (err) {
     console.log('DB CONNECTION FAILED: ' + err);
   }
   else {
-    console.log('DB CONNECTION SUCCESS: ' + process.env.DB_URL);
+    console.log('DB CONNECTION SUCCESS: ' + process.env.MONGODB_URI);
   }
 })
 
