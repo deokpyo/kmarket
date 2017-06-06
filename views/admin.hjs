@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{ title }}</title>
+</head>
+
+<body>
+  <h1>Admin Page</h1>
+  <form action="/api/item" method="post">
+  <label>Image File</label>
+    <input type="file" name="image" placeholder="Item Image" />
+    <br/><br/>
+    <label>Name: </label>
+    <input type="text" name="title" placeholder="Item Title" />
+    <label>Price: </label>
+    <input type="text" name="price" placeholder="Item Price" />
+    <br/>
+    <br/>
+    <label>Item Condition: </label>
+    <select name="condition">
+      <option value="Fair">Fair</option>
+      <option value="Good">Good</option>
+      <option value="Excellent">Excellent</option>
+    </select>
+    <label>Pick-up Location: </label>
+    <select name="location">
+      <option value="Austin, TX 78758">Austin</option>
+      <option value="Killeen, TX 76549">Killeen</option>
+      <option value="Austin, TX 78758 or Killeen, TX 76549">Both</option>
+    </select>
+     <label>Negotiable Price: </label>
+    <select name="negotiable">
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select>
+    <br/><br/>
+    <label>Item Age: </label>
+    <select name="age">
+      <option value="Not Available">N/A</option>
+      <option value="Less than 1 Year">Less than 1 Year</option>
+      <option value="1-2 Years">1-2 Years</option>
+      <option value="More than 3 Years">More than 3 Years</option>
+    </select>
+    <label>Bought as New or Used: </label>
+    <select name="type">
+      <option value="Not Available">N/A</option>
+      <option value="Bought as New">New</option>
+      <option value="Bought as Used">Used</option>
+    </select>
+    
+    <p>Any Other Description</p>
+     <textarea name="description" rows="5" cols="100" placeholder="Item Description"></textarea>
+    <br/>
+    <input style="font-size:40px; color:blue" type="submit" value="Create Item" />
+  </form>
+  <br/>
+  <form action="/admin/logout" method="post">
+    <input style="font-size:20px; color:red" type="submit" value="Log Out" />
+  </form>
+</body>
+
+</html>
